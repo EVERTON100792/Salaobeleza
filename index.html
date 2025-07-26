@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza Studio - Salão de Beleza Premium</title>
+    <meta name="description" content="Belleza Studio - Salão de beleza premium especializado em cuidados capilares, manicure, pedicure e tratamentos estéticos. Agende seu horário!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/logo.svg" alt="Belleza Studio" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <button class="cta-btn" onclick="openAppointmentModal()">
+                    <i class="fas fa-calendar-alt"></i>
+                    Agendar Horário
+                </button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Beleza que<br><span class="accent">Encanta</span></h1>
+                <p class="hero-subtitle">Desperte sua beleza natural em um ambiente sofisticado e acolhedor. No Belleza Studio, cada detalhe é pensado para proporcionar uma experiência única e transformadora.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openAppointmentModal()">
+                        <i class="fas fa-calendar-check"></i>
+                        Agende seu Horário
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('services')">
+                        <i class="fas fa-arrow-down"></i>
+                        Conheça Nossos Serviços
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://pixabay.com/get/g8bbc78f827e5ae63e8429faed54bc30be0b104ae25e6b7a615eff5c97702418d3dff2cc467b40b9b367e0fb23ef392498bfc1b76cdfd62785edd8da7127f59b8_1280.jpg" alt="Interior do Belleza Studio" class="hero-img">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Oferecemos uma gama completa de serviços de beleza com técnicas modernas e produtos premium</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Hair Services -->
+                <div class="service-category scroll-reveal-left">
+                    <div class="category-header">
+                        <i class="fas fa-cut"></i>
+                        <h3>Cabelos</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Corte Feminino</h4>
+                                <p>Corte personalizado com análise facial completa</p>
+                            </div>
+                            <span class="service-price">R$ 80</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Coloração</h4>
+                                <p>Coloração profissional com produtos premium</p>
+                            </div>
+                            <span class="service-price">R$ 120</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Mechas</h4>
+                                <p>Técnicas modernas de iluminação capilar</p>
+                            </div>
+                            <span class="service-price">R$ 150</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Tratamento Capilar</h4>
+                                <p>Hidratação profunda e reconstrução</p>
+                            </div>
+                            <span class="service-price">R$ 90</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Escova Progressiva</h4>
+                                <p>Alisamento natural e duradouro</p>
+                            </div>
+                            <span class="service-price">R$ 200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nail Services -->
+                <div class="service-category scroll-reveal">
+                    <div class="category-header">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <h3>Unhas</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Manicure</h4>
+                                <p>Cuidado completo das unhas das mãos</p>
+                            </div>
+                            <span class="service-price">R$ 35</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Pedicure</h4>
+                                <p>Tratamento relaxante para os pés</p>
+                            </div>
+                            <span class="service-price">R$ 40</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Unha em Gel</h4>
+                                <p>Alongamento e decoração em gel</p>
+                            </div>
+                            <span class="service-price">R$ 70</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Nail Art</h4>
+                                <p>Decorações personalizadas e artísticas</p>
+                            </div>
+                            <span class="service-price">R$ 25</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beauty Treatments -->
+                <div class="service-category scroll-reveal-right">
+                    <div class="category-header">
+                        <i class="fas fa-spa"></i>
+                        <h3>Estética</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Limpeza de Pele</h4>
+                                <p>Limpeza profunda com extração</p>
+                            </div>
+                            <span class="service-price">R$ 80</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Peeling Facial</h4>
+                                <p>Renovação celular e rejuvenescimento</p>
+                            </div>
+                            <span class="service-price">R$ 120</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Massagem Relaxante</h4>
+                                <p>Massagem terapêutica anti-stress</p>
+                            </div>
+                            <span class="service-price">R$ 100</span>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h4>Design de Sobrancelhas</h4>
+                                <p>Modelagem personalizada com henna</p>
+                            </div>
+                            <span class="service-price">R$ 45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <button class="btn-primary" onclick="openAppointmentModal()">
+                    <i class="fas fa-calendar-plus"></i>
+                    Agendar Serviço
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Galeria</h2>
+                <p class="section-subtitle">Conheça alguns dos nossos trabalhos e inspire-se para sua próxima transformação</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="hair">Cabelos</button>
+                <button class="filter-btn" data-filter="nails">Unhas</button>
+                <button class="filter-btn" data-filter="treatments">Estética</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://pixabay.com/get/gdf0a4045df267a2cf7e023d3d6c1dd49319fdcc1f36e9f3545cb202a2b08d8326570823baec76bac9c6c0c98a8b33f886a44ac36b756916a8d46316c4145bb32_1280.jpg" alt="Corte e coloração feminino">
+                    <div class="gallery-overlay">
+                        <h4>Corte & Coloração</h4>
+                        <p>Transformação completa com mechas e corte moderno</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://pixabay.com/get/g485ed0b5589387997819d5c06b618dfaca0aa606a2e54bcdf85d1c5ce4ce8ecc9e5b36b796776c06a2f184cf79af408f4b3c31bc5744528fdad3ba6538579fbd_1280.jpg" alt="Penteado elegante">
+                    <div class="gallery-overlay">
+                        <h4>Penteado Elegante</h4>
+                        <p>Produção para eventos especiais</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nails">
+                    <img src="https://pixabay.com/get/gb5a44730d4cb50d857f1804c7df9ead4a6d6c2d59982a24a85718f3a475d5894cee9ae14afd5b68a75cfd0d01645f372983d1e883635db40c0f13a7de696e38c_1280.jpg" alt="Nail art profissional">
+                    <div class="gallery-overlay">
+                        <h4>Nail Art</h4>
+                        <p>Decoração artística personalizada</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://pixabay.com/get/g68085ea4d755dcb4283173c33b8716a9759ea852982930ee91ba7f6692eb8e489b313557bf51d444b02470c33cc6f018867af96b33f16c5976374e64e24db03b_1280.jpg" alt="Coloração premium">
+                    <div class="gallery-overlay">
+                        <h4>Coloração Premium</h4>
+                        <p>Técnicas avançadas de coloração</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="treatments">
+                    <img src="https://pixabay.com/get/g02cf209ebb02ad286582a1bf91766383407c1d91a552c8bb641d759764aa94feb84336f5ba4e7eab96eddefafdf17b01b44627655e58c8ada51b5209dc28276d_1280.jpg" alt="Tratamento facial">
+                    <div class="gallery-overlay">
+                        <h4>Tratamento Facial</h4>
+                        <p>Cuidados especializados para a pele</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nails">
+                    <img src="https://pixabay.com/get/gc49dac3d342599c0add5fb6c6ffb634f0f235cb66c8a8f3317be99df821057db22ce78af6e0f0955ca5db2483983b7ea05581f6c5488589f714fb4a81d08b60b_1280.jpg" alt="Manicure profissional">
+                    <div class="gallery-overlay">
+                        <h4>Manicure Premium</h4>
+                        <p>Cuidado completo das unhas</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <img src="https://pixabay.com/get/g270c113957a9609340d5c5425643fc77895e12e89e1e26e2c831cbd814877680699cfb848fc397220c32e050011befd1d3857469b6ac05028cea7c9fada19359_1280.jpg" alt="Corte masculino">
+                    <div class="gallery-overlay">
+                        <h4>Corte Masculino</h4>
+                        <p>Estilos modernos e clássicos</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="treatments">
+                    <img src="https://pixabay.com/get/g228f620279ba710b2c957951958f072c9920c8aa32e81883f93b1155f7c51a8fcab44eedadecc1a5d1e84b7a17d45d044a94f7e065efcca1dfec5776cee29125_1280.jpg" alt="Massagem relaxante">
+                    <div class="gallery-overlay">
+                        <h4>Massagem Relaxante</h4>
+                        <p>Momento de relaxamento e bem-estar</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nails">
+                    <img src="https://pixabay.com/get/gb22b1c9fd8d002f5b4f39ba921fb4efc8a334e5e07e113f9e6d42b2c75ef3cd13667a37778b239929c34f68b2dc4150f7f9058f96d18126a2a56ee68541b66e1_1280.jpg" alt="Pedicure spa">
+                    <div class="gallery-overlay">
+                        <h4>Pedicure Spa</h4>
+                        <p>Tratamento relaxante para os pés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="section-title">Sobre o Belleza Studio</h2>
+                        <p class="section-subtitle">Mais de 15 anos dedicados à beleza e bem-estar</p>
+                    </div>
+                    
+                    <div class="about-story">
+                        <p>O Belleza Studio nasceu do sonho de criar um espaço onde a beleza se encontra com o bem-estar. Fundado em 2008, nosso salão tem se dedicado a proporcionar experiências únicas e transformadoras para nossos clientes.</p>
+                        
+                        <p>Nossa filosofia é simples: cada pessoa possui uma beleza única que merece ser valorizada. Com uma equipe altamente qualificada e produtos premium, trabalhamos para realçar o que há de melhor em você.</p>
+                        
+                        <p>Ao longo dos anos, construímos uma reputação sólida baseada na excelência do atendimento, na qualidade dos serviços e no cuidado personalizado com cada cliente.</p>
+                    </div>
+
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Paixão</h4>
+                            <p>Amor genuíno pelo que fazemos</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-star"></i>
+                            <h4>Excelência</h4>
+                            <p>Qualidade em cada detalhe</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Cuidado</h4>
+                            <p>Atenção personalizada para cada cliente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://pixabay.com/get/g5b1029e55e3bf3468b1ab8df310f65849b41ae27c9db00560bcca360135c1583ca818f554a10ac561f1797bb5460bfeb9eaab66214d0ed7a19e66bf8687d60c8_1280.jpg" alt="Interior do Belleza Studio">
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h3 class="team-title">Nossa Equipe</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://pixabay.com/get/gdd6f426e7effe1a1c9ac889c65251b1c611e4c15118aceea1be68329855acf7b074c5786a67b2fc61d8e742bc6048c35b8e5e79b2f2427d9ac0ca8c055c97b51_1280.jpg" alt="Mariana Silva">
+                        </div>
+                        <div class="member-info">
+                            <h4>Mariana Silva</h4>
+                            <p>Diretora & Hair Stylist</p>
+                            <span>15 anos de experiência</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://pixabay.com/get/g770314639e02dfdfe4cd82539b595dd7685a12412cc425b5de3839fbadec60855b3d98af29d89e04d9b0bbafcf45f8f7da1c659f083ccc41c720642ddd42f28f_1280.jpg" alt="Ana Costa">
+                        </div>
+                        <div class="member-info">
+                            <h4>Ana Costa</h4>
+                            <p>Especialista em Coloração</p>
+                            <span>10 anos de experiência</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://pixabay.com/get/g43ce04eaf1c80cbfa18fe31d580b1a289e0c8f955a3fa8103ff30d16a53fd85e4cfeb0d7a9c7e7a0234b85d6f0d091b110fd736ed3d55935ccb81e87cb2066d8_1280.jpg" alt="Camila Rodrigues">
+                        </div>
+                        <div class="member-info">
+                            <h4>Camila Rodrigues</h4>
+                            <p>Nail Designer</p>
+                            <span>8 anos de experiência</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://pixabay.com/get/gfa1a9b48df71222f4aba059827d864fc9cd91dc2b5b49f85f058bdfcfb36723e857250b228adcbb5c0ab5dddeed68a810731e1f61b624da37d354ffbacd9b359_1280.jpg" alt="Sofia Mendes">
+                        </div>
+                        <div class="member-info">
+                            <h4>Sofia Mendes</h4>
+                            <p>Esteticista</p>
+                            <span>12 anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contato</h2>
+                <p class="section-subtitle">Entre em contato conosco e agende seu horário</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h4>Endereço</h4>
+                            <p>Rua das Flores, 123<br>Jardim Europa - São Paulo, SP<br>CEP: 01234-567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>(11) 9 9999-9999</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h4>E-mail</h4>
+                            <p>contato@bellezastudio.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-details">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 9h às 19h<br>Sábado: 8h às 17h<br>Domingo: Fechado</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <button class="whatsapp-btn" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </button>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Solicitar Agendamento</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Serviço</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="corte-feminino">Corte Feminino</option>
+                                    <option value="coloracao">Coloração</option>
+                                    <option value="mechas">Mechas</option>
+                                    <option value="tratamento-capilar">Tratamento Capilar</option>
+                                    <option value="escova-progressiva">Escova Progressiva</option>
+                                    <option value="manicure">Manicure</option>
+                                    <option value="pedicure">Pedicure</option>
+                                    <option value="unha-gel">Unha em Gel</option>
+                                    <option value="nail-art">Nail Art</option>
+                                    <option value="limpeza-pele">Limpeza de Pele</option>
+                                    <option value="peeling-facial">Peeling Facial</option>
+                                    <option value="massagem">Massagem Relaxante</option>
+                                    <option value="design-sobrancelhas">Design de Sobrancelhas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date">Data Preferida</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Horário Preferido</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Observações</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Alguma observação especial?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Solicitação
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4430349768!2d-46.6781976!3d-23.5903344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57f1b7f7b7f7%3A0x1234567890abcdef!2sRua%20das%20Flores%2C%20123%20-%20Jardim%20Europa%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/logo.svg" alt="Belleza Studio" class="footer-logo">
+                    <p>Transformando beleza em arte desde 2008</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Cabelos</a></li>
+                        <li><a href="#services">Unhas</a></li>
+                        <li><a href="#services">Estética</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123</li>
+                        <li><i class="fas fa-phone"></i> (11) 9 9999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@bellezastudio.com.br</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horário</h4>
+                    <ul>
+                        <li>Segunda a Sexta: 9h às 19h</li>
+                        <li>Sábado: 8h às 17h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Belleza Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agendar Horário</h3>
+                <button class="close-btn" onclick="closeAppointmentModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-group">
+                    <label for="modalName">Nome Completo</label>
+                    <input type="text" id="modalName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalPhone">Telefone</label>
+                    <input type="tel" id="modalPhone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalEmail">E-mail</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modalService">Serviço</label>
+                        <select id="modalService" name="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="corte-feminino">Corte Feminino - R$ 80</option>
+                            <option value="coloracao">Coloração - R$ 120</option>
+                            <option value="mechas">Mechas - R$ 150</option>
+                            <option value="tratamento-capilar">Tratamento Capilar - R$ 90</option>
+                            <option value="escova-progressiva">Escova Progressiva - R$ 200</option>
+                            <option value="manicure">Manicure - R$ 35</option>
+                            <option value="pedicure">Pedicure - R$ 40</option>
+                            <option value="unha-gel">Unha em Gel - R$ 70</option>
+                            <option value="nail-art">Nail Art - R$ 25</option>
+                            <option value="limpeza-pele">Limpeza de Pele - R$ 80</option>
+                            <option value="peeling-facial">Peeling Facial - R$ 120</option>
+                            <option value="massagem">Massagem Relaxante - R$ 100</option>
+                            <option value="design-sobrancelhas">Design de Sobrancelhas - R$ 45</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="modalDate">Data</label>
+                        <input type="date" id="modalDate" name="date" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalTime">Horário</label>
+                    <select id="modalTime" name="time" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalMessage">Observações</label>
+                    <textarea id="modalMessage" name="message" rows="3" placeholder="Alguma observação especial?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-calendar-check"></i>
+                    Confirmar Agendamento
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
